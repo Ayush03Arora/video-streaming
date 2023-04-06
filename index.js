@@ -50,7 +50,7 @@ app.get('/videos/:filename', (req, res) => {
     
     stream.pipe(res);
   } else {
-    // Send a 404 error response if the file does not exist
+    // Sending a 404 error response if the file does not exist
     res.status(404).json({
       message: 'File not found',
     });
@@ -78,7 +78,7 @@ app.get('/download/:filename', (req, res) => {
     
     stream.pipe(res);
   } else {
-    // Send a 404 error response if the file does not exist
+    // Sending a 404 error response if the file does not exist
     res.status(404).json({
       message: 'File not found',
     });
